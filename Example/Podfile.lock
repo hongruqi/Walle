@@ -1,0 +1,31 @@
+PODS:
+  - CocoaLumberjack (3.2.0):
+    - CocoaLumberjack/Default (= 3.2.0)
+    - CocoaLumberjack/Extensions (= 3.2.0)
+  - CocoaLumberjack/Default (3.2.0)
+  - CocoaLumberjack/Extensions (3.2.0):
+    - CocoaLumberjack/Default
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Walle (1.0.0):
+    - CocoaLumberjack
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - Walle (from `../`)
+
+EXTERNAL SOURCES:
+  Walle:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
+  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  Walle: 26f843ef88a11b8c25067e9ffada46db10927b4e
+
+PODFILE CHECKSUM: 56d332a7f26b2b50440dd74a38cd86b15f73bd3d
+
+COCOAPODS: 1.2.1

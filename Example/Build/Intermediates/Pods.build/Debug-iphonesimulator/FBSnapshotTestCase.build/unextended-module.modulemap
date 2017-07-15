@@ -1,0 +1,10 @@
+framework module FBSnapshotTestCase {
+  umbrella header "FBSnapshotTestCase-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module FBSnapshotTestCase.__Swift {
+    exclude header "FBSnapshotTestCase-Swift.h"
+}

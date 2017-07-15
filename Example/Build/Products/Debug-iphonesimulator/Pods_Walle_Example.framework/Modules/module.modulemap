@@ -1,0 +1,6 @@
+framework module Pods_Walle_Example {
+  umbrella header "Pods-Walle_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

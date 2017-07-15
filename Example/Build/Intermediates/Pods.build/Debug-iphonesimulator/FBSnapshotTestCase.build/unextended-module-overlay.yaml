@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/hongruqi/iOSVivaVideoNEW/Pods/Walle/Example/Build/Products/Debug-iphonesimulator/FBSnapshotTestCase/FBSnapshotTestCase.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/hongruqi/iOSVivaVideoNEW/Pods/Walle/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/FBSnapshotTestCase.build/unextended-module.modulemap',
+    }]
+  }]
+}

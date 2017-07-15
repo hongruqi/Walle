@@ -1,0 +1,6 @@
+framework module Walle {
+  umbrella header "Walle-umbrella.h"
+
+  export *
+  module * { export * }
+}

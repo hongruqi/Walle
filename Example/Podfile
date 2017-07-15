@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Walle_Example' do
+  pod 'Walle', :path => '../'
+
+  target 'Walle_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
