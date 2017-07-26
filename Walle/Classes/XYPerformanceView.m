@@ -2,7 +2,7 @@
 //  XYPerformanceView.m
 //  Walle
 //
-//  Created by hongru qi on 07/07/2017.
+//  Created by walter on 07/07/2017.
 //
 
 #import "XYPerformanceView.h"

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Walle'
-  s.version          = '1.0.0'
-  s.summary          = 'A short description of Walle.'
+  s.version          = '1.1.0'
+  s.summary          = 'iOS Application performance monitoring'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+iOS Application performance monitoring.
                        DESC
 
   s.homepage         = 'https://github.com/hongruqi/Walle'
@@ -32,4 +32,5 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Walle/Classes/**/*'
   s.dependency 'CocoaLumberjack'
+  s.dependency 'JRSwizzle'
 end

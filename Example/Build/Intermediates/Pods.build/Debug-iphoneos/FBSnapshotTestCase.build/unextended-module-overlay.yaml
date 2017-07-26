@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': '/Users/hongruqi/iOSVivaVideoNEW/Pods/Walle/Example/Build/Products/Debug-iphoneos/FBSnapshotTestCase/FBSnapshotTestCase.framework/Modules'
+    'name': '/Users/hongruqi/Pods/Walle/Example/Build/Products/Debug-iphoneos/FBSnapshotTestCase/FBSnapshotTestCase.framework/Modules'
     'contents': [{
       'type': 'file',
       'name': 'module.modulemap',
-      'external-contents': '/Users/hongruqi/iOSVivaVideoNEW/Pods/Walle/Example/Build/Intermediates/Pods.build/Debug-iphoneos/FBSnapshotTestCase.build/unextended-module.modulemap',
+      'external-contents': '/Users/hongruqi/Pods/Walle/Example/Build/Intermediates/Pods.build/Debug-iphoneos/FBSnapshotTestCase.build/unextended-module.modulemap',
     }]
   }]
 }

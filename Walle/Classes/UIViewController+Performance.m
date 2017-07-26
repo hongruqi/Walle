@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import "DDLegacyMacros.h"
+#import "JRSwizzle.h"
+#import "XYPerformanceMonitor.h"
 
 static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 
@@ -22,27 +24,41 @@ static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 @implementation UIViewController (Performance)
 
 + (void)load{
-    [self walle_swizzlingViewWillAppear];
-    [self walle_swizzlingViewDidAppear];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self walle_swizzlingViewWillAppear];
+        [self walle_swizzlingViewDidAppear];
+        [self walle_swizzlingViewDidLoad];
+    });
+}
+
++ (void)walle_swizzlingViewDidLoad
+{    NSError *error = nil;
+    [UIViewController jr_swizzleMethod:@selector(viewDidLoad) withMethod:@selector(walle_viewDidLoad) error:&error];
 }
 
 + (void)walle_swizzlingViewWillAppear
 {
-    SEL originalSelector = @selector(viewWillAppear:);
-    SEL swizzledSelector = @selector(walle_viewWillAppear:);
-    [self swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
+    [UIViewController jr_swizzleMethod:@selector(viewWillAppear:) withMethod:@selector(walle_viewWillAppear:) error:nil];
 }
 
 + (void)walle_swizzlingViewDidAppear
 {
-    SEL originalSelector = @selector(viewDidAppear:);
-    SEL swizzledSelector = @selector(walle_viewDidAppear:);
-    [self swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
+    [UIViewController jr_swizzleMethod:@selector(viewDidAppear:) withMethod:@selector(walle_viewDidAppear:) error:nil];
+}
+
+- (void)walle_viewDidLoad
+{
+    self.viewControllerAppearDuration = CACurrentMediaTime();
+    [self walle_viewDidLoad];
 }
 
 - (void)walle_viewWillAppear:(BOOL)animated
 {
-    self.viewControllerAppearDuration = CACurrentMediaTime();
+    if (self.viewControllerAppearDuration == 0) {
+        self.viewControllerAppearDuration = CACurrentMediaTime();
+    }
+    
     [self walle_viewWillAppear:animated];
 }
 
@@ -50,27 +66,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 {
     [self walle_viewDidAppear:animated];
     self.viewControllerAppearDuration = CACurrentMediaTime() - self.viewControllerAppearDuration;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *name = NSStringFromClass(self.class);
-        DDLogInfo(@"View Controller :%@ show time : %g s", name, self.viewControllerAppearDuration);
-    });
-}
-
-
-+ (void)swizzlingInClass:(Class)cls originalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector
-{
-    Class clz = cls;
-    Method originalMethod = class_getInstanceMethod(clz, originalSelector);
-    Method swizzledMethod = class_getInstanceMethod(clz, swizzledSelector);
-    
-    BOOL didAddMethod = class_addMethod(clz, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
-    
-    if (didAddMethod) {
-        class_replaceMethod(clz, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-    }else{
-        method_exchangeImplementations(originalMethod, swizzledMethod);
-    }
+    NSString *name = NSStringFromClass(self.class);
+    DDLogInfo(@"%@ view_finish_shown_time : %g s", name, self.viewControllerAppearDuration);
+    self.viewControllerAppearDuration = 0;
+    [[XYPerformanceMonitor sharedInstance] setPageName:NSStringFromClass(self.class)];
 }
 
 - (void)setViewControllerAppearDuration:(CFTimeInterval)viewControllerAppearDuration
@@ -82,5 +81,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 {
     return [objc_getAssociatedObject(self, @selector(viewControllerAppearDuration)) doubleValue];
 }
+
 
 @end

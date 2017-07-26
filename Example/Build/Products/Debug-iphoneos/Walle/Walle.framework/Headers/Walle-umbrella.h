@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "UIViewController+Performance.h"
 #import "XYPerformanceLabel.h"
 #import "XYPerformanceMonitor.h"
 #import "XYPerformanceUtility.h"

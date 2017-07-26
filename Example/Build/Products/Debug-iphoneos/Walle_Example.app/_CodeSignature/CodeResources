@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		nLl67IyodGB49OZWphEMrOU3I0A=
+		wrTxMOIguaN7ZYM0cShd6tRz/Hk=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		N2WVdACcyDebfRlSAKVIJi6m9t8=
+		Gjvw30T0w4N/o9hLLT+HKxZi8oE=
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/CocoaLumberjack</key>
 		<data>
-		sO5TdqLNmVhJ+oZPJDEdDmtZHNY=
+		xDna2+Y0KKqfyR6OH4bygUGe/lk=
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
 		<data>
@@ -28,13 +28,25 @@
 		<data>
 		zSL+z1xygC5Pts7gJpyTZA174l0=
 		</data>
+		<key>Frameworks/JRSwizzle.framework/Info.plist</key>
+		<data>
+		R64+udcSV38DOeFmt7qc6DMDNaM=
+		</data>
+		<key>Frameworks/JRSwizzle.framework/JRSwizzle</key>
+		<data>
+		Spx1AACkgezlOnpq9OKzYy5vXc0=
+		</data>
+		<key>Frameworks/JRSwizzle.framework/_CodeSignature/CodeResources</key>
+		<data>
+		CRZU740vXCgo1jBD8H3p6xszqfs=
+		</data>
 		<key>Frameworks/Walle.framework/Info.plist</key>
 		<data>
 		aH2bZxC6Byl57aSZCvCDR2LuQz0=
 		</data>
 		<key>Frameworks/Walle.framework/Walle</key>
 		<data>
-		aCRs+xa2b5ylAkR8Yu93M7Sjn8Q=
+		yNof2MYTIoJi5Vv4WGVh7dm1Zr0=
 		</data>
 		<key>Frameworks/Walle.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -50,11 +62,11 @@
 		</data>
 		<key>Main.storyboardc/UIViewController-whP-gf-Uak.nib</key>
 		<data>
-		NY9UFhpKGkg+0+lxkGuDs+g8NK4=
+		ZgvuVBcEjy/pawoQwJ7CCpT0CfY=
 		</data>
 		<key>Main.storyboardc/whP-gf-Uak-view-TpU-gO-2f1.nib</key>
 		<data>
-		vSjeZTaxcPgh/Twr6Jm1lnGJPZ8=
+		zcge2jwIFIOpARqJWZOJWR0AHH8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -80,11 +92,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nLl67IyodGB49OZWphEMrOU3I0A=
+			wrTxMOIguaN7ZYM0cShd6tRz/Hk=
 			</data>
 			<key>hash2</key>
 			<data>
-			JrkdGKp6XiD9aSlYpgLLXGEmtRDRBOWwyiqr9DdybFI=
+			vQy3Q4IPmKDVunA/0u7xs14q2oVzyG3ME4VfhsAs404=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -102,22 +114,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			N2WVdACcyDebfRlSAKVIJi6m9t8=
+			Gjvw30T0w4N/o9hLLT+HKxZi8oE=
 			</data>
 			<key>hash2</key>
 			<data>
-			2TNYPZB3Dt15pnsNMsjW2AN5Fm78cXsA+lcaPt/+9Bc=
+			H0pu3JfeVepVS1d9x36LtHpNIc6hqa3nxSXL8aKN9GM=
 			</data>
 		</dict>
 		<key>Frameworks/CocoaLumberjack.framework/CocoaLumberjack</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sO5TdqLNmVhJ+oZPJDEdDmtZHNY=
+			xDna2+Y0KKqfyR6OH4bygUGe/lk=
 			</data>
 			<key>hash2</key>
 			<data>
-			JtegfPZayZFapUOqaw197uG/X9GTvWl1jrjsZk/UFmw=
+			+6tbEpj3CXt8nxyLDMRUR00it0V6EfODzqb7Wmvnusc=
 			</data>
 		</dict>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
@@ -142,6 +154,39 @@
 			ndaQcirFgxhte/6uwBifqGIvJMgpsWhlas7PDFYMhBA=
 			</data>
 		</dict>
+		<key>Frameworks/JRSwizzle.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			R64+udcSV38DOeFmt7qc6DMDNaM=
+			</data>
+			<key>hash2</key>
+			<data>
+			/ppwSrLkcFIYrOPkoGrK5TUFZ85GxdOq6PkLAy254Pc=
+			</data>
+		</dict>
+		<key>Frameworks/JRSwizzle.framework/JRSwizzle</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Spx1AACkgezlOnpq9OKzYy5vXc0=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZV3gb3LklZumAaor++n/veNE40nKPBIbU/CPn0BmDKo=
+			</data>
+		</dict>
+		<key>Frameworks/JRSwizzle.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CRZU740vXCgo1jBD8H3p6xszqfs=
+			</data>
+			<key>hash2</key>
+			<data>
+			VmD6sL46YNZZbZkeesBWEHVOhowrSzJAGQZhE5zwkJs=
+			</data>
+		</dict>
 		<key>Frameworks/Walle.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -157,11 +202,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aCRs+xa2b5ylAkR8Yu93M7Sjn8Q=
+			yNof2MYTIoJi5Vv4WGVh7dm1Zr0=
 			</data>
 			<key>hash2</key>
 			<data>
-			kxYhmXakWxoi4+wp6Q0NgsD40NmEGdVc9HFHppq/eQA=
+			ngaFV1NAQiUMxFBO3CunyZTRIwB5TkKVEKtKYIdBFPw=
 			</data>
 		</dict>
 		<key>Frameworks/Walle.framework/_CodeSignature/CodeResources</key>
@@ -190,22 +235,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NY9UFhpKGkg+0+lxkGuDs+g8NK4=
+			ZgvuVBcEjy/pawoQwJ7CCpT0CfY=
 			</data>
 			<key>hash2</key>
 			<data>
-			hpIX3nh5MfQWqHwx+VIfLOHexeZWe/l1ebbhtKL3l8I=
+			3xYh4l0YJBrm8Gnh8YIB2wqnvRdIeB6SPVKGtF+/DS8=
 			</data>
 		</dict>
 		<key>Main.storyboardc/whP-gf-Uak-view-TpU-gO-2f1.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vSjeZTaxcPgh/Twr6Jm1lnGJPZ8=
+			zcge2jwIFIOpARqJWZOJWR0AHH8=
 			</data>
 			<key>hash2</key>
 			<data>
-			GHQurKA6KnvmCHl29W6CLovojAna2Ftplot3rSRcV8g=
+			tI2wd1uCQzt19x3+EoeY1PhDopDnysYagxhpUG1bWbo=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>

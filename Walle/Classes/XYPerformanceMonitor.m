@@ -2,7 +2,7 @@
 //  XYPerformanceMonitor.m
 //  Pods
 //
-//  Created by hongru qi on 04/07/2017.
+//  Created by walter on 04/07/2017.
 //
 //
 
@@ -31,6 +31,7 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
 @property (nonatomic, assign) NSUInteger count;
 @property (nonatomic, strong) XYPerformanceView *performanceView;
 @property (nonatomic, assign) BOOL isShownPerformanceBar;
+@property (nonatomic, copy) NSString *currentPageName;
 
 @end
 
@@ -109,6 +110,11 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
     [self.performanceView showPerformacneView:NO];
 }
 
+- (void)setPageName:(NSString *)name
+{
+    self.currentPageName = name;
+}
+
 - (void)envokeDisplayLink:(CADisplayLink *)displayLink
 {
     if (_lastTime == 0) {
@@ -131,7 +137,7 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
     NSInteger shownFPS = round(fps);
     CGFloat memory = [XYPerformanceUtility usedMemoryInMB];
     CGFloat cpu = [XYPerformanceUtility cpuUsage];
-    DDLogInfo(@"FPS:%ld,MEM:%.2f,CPU:%.2f", (long)shownFPS, memory, cpu);
+    DDLogInfo(@"Page:%@, FPS:%ld, MEM:%.2f, CPU:%.2f", self.currentPageName, (long)shownFPS, memory, cpu);
     
     [self.performanceView setPerformanceViewData:cpu memory:memory FPS:shownFPS];
     

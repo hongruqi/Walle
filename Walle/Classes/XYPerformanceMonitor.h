@@ -2,7 +2,7 @@
 //  XYPerformanceMonitor.h
 //  Pods
 //
-//  Created by hongru qi on 04/07/2017.
+//  Created by walter on 04/07/2017.
 //
 //
 
@@ -20,5 +20,7 @@
 - (void)startMonitorWithBar:(BOOL)isShownPerformanceBar;
 
 - (void)stop;
+
+- (void)setPageName:(NSString *)name;
 
 @end

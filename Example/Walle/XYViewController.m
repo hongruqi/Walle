@@ -25,7 +25,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [[XYPerformanceMonitor sharedInstance] startMonitor: YES];
+    [[XYPerformanceMonitor sharedInstance] startMonitorWithBar: YES];
 }
 
 
