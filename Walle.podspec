@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Walle'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'iOS Application performance monitoring'
 
 # This description is used to generate tags and improve search results.
