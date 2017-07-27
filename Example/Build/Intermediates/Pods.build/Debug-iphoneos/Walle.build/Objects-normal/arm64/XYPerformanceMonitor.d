@@ -22,4 +22,5 @@ dependencies: \
   /Users/hongruqi/Pods/Walle/Example/Pods/CocoaLumberjack/Classes/CocoaLumberjack.h \
   /Users/hongruqi/Pods/Walle/Example/Pods/Target\ Support\ Files/CocoaLumberjack/CocoaLumberjack-umbrella.h \
   /Users/hongruqi/Pods/Walle/Walle/Classes/XYPerformanceView.h \
-  /Users/hongruqi/Pods/Walle/Walle/Classes/XYPerformanceLabel.h
+  /Users/hongruqi/Pods/Walle/Walle/Classes/XYPerformanceLabel.h \
+  /Users/hongruqi/Pods/Walle/Walle/Classes/XYMainLoopMonitor.h

@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "BSBacktraceLogger.h"
 #import "UIViewController+Performance.h"
+#import "XYMainLoopMonitor.h"
 #import "XYPerformanceLabel.h"
 #import "XYPerformanceMonitor.h"
 #import "XYPerformanceUtility.h"

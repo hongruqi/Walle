@@ -18,43 +18,43 @@
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/CocoaLumberjack</key>
 		<data>
-		xDna2+Y0KKqfyR6OH4bygUGe/lk=
+		sYj/2su3HXcv3QUAK5YR123XeVc=
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
 		<data>
-		Ev/DIA4w3UfuVFawHaqvKdDjq2Q=
+		VDJM1nsnd94Zkb2eKEQnSjDkWow=
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources</key>
 		<data>
-		zSL+z1xygC5Pts7gJpyTZA174l0=
+		IV+RVlfCnWF+AS9WaDUPVpqXUwk=
 		</data>
 		<key>Frameworks/JRSwizzle.framework/Info.plist</key>
 		<data>
-		R64+udcSV38DOeFmt7qc6DMDNaM=
+		wOcrsSAlwdpHVPxeId942pwFFaw=
 		</data>
 		<key>Frameworks/JRSwizzle.framework/JRSwizzle</key>
 		<data>
-		Spx1AACkgezlOnpq9OKzYy5vXc0=
+		cHJ3FpAGIornp0kL4X3qJT7yEes=
 		</data>
 		<key>Frameworks/JRSwizzle.framework/_CodeSignature/CodeResources</key>
 		<data>
-		CRZU740vXCgo1jBD8H3p6xszqfs=
+		fiVk5xOZljGK3x8kqXdRCYL6kMI=
 		</data>
 		<key>Frameworks/Walle.framework/Info.plist</key>
 		<data>
-		aH2bZxC6Byl57aSZCvCDR2LuQz0=
+		MOjskPXo/Zkcc9PJcieQow3Iklo=
 		</data>
 		<key>Frameworks/Walle.framework/Walle</key>
 		<data>
-		yNof2MYTIoJi5Vv4WGVh7dm1Zr0=
+		5ocw8mTh6lS0wiI7pvIVfNcp1YI=
 		</data>
 		<key>Frameworks/Walle.framework/_CodeSignature/CodeResources</key>
 		<data>
-		mLfJ97gR2HwCazC91MUgM+16F+A=
+		T8tl0QruL4leRrEsVHUD681qgJ0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/YhxPdV0nfGXmk2IC+tNAz4TC9g=
+		DCjW2KBsEp7IEIf5eE5khgxPIBc=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -125,99 +125,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xDna2+Y0KKqfyR6OH4bygUGe/lk=
+			sYj/2su3HXcv3QUAK5YR123XeVc=
 			</data>
 			<key>hash2</key>
 			<data>
-			+6tbEpj3CXt8nxyLDMRUR00it0V6EfODzqb7Wmvnusc=
+			wMamC77eLvBQdsjo53BHCYuu0Ubk2JZdtfwaVe0nDEo=
 			</data>
 		</dict>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ev/DIA4w3UfuVFawHaqvKdDjq2Q=
+			VDJM1nsnd94Zkb2eKEQnSjDkWow=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZmMX1NbWDjBp01cNG27vXXQc6tfD4ulIpa5vQ/0vQ7c=
+			aTBe5OgRbN0+IRpYPHOJ73yS0fZm+EwOm06w30qlGjU=
 			</data>
 		</dict>
 		<key>Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zSL+z1xygC5Pts7gJpyTZA174l0=
+			IV+RVlfCnWF+AS9WaDUPVpqXUwk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ndaQcirFgxhte/6uwBifqGIvJMgpsWhlas7PDFYMhBA=
+			LG3T0Uz/HqEGhiNpc1sY4/g6XoNXUIAuQgZ4v9wSOfE=
 			</data>
 		</dict>
 		<key>Frameworks/JRSwizzle.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R64+udcSV38DOeFmt7qc6DMDNaM=
+			wOcrsSAlwdpHVPxeId942pwFFaw=
 			</data>
 			<key>hash2</key>
 			<data>
-			/ppwSrLkcFIYrOPkoGrK5TUFZ85GxdOq6PkLAy254Pc=
+			h3VftRrRhREjKWPOG6qFje9fWxMqKYEAhYuVjB+AYT8=
 			</data>
 		</dict>
 		<key>Frameworks/JRSwizzle.framework/JRSwizzle</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Spx1AACkgezlOnpq9OKzYy5vXc0=
+			cHJ3FpAGIornp0kL4X3qJT7yEes=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZV3gb3LklZumAaor++n/veNE40nKPBIbU/CPn0BmDKo=
+			+drneTF0CEt66PGhR0Z664N71c5Bo4/mk+01TjV3LUc=
 			</data>
 		</dict>
 		<key>Frameworks/JRSwizzle.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CRZU740vXCgo1jBD8H3p6xszqfs=
+			fiVk5xOZljGK3x8kqXdRCYL6kMI=
 			</data>
 			<key>hash2</key>
 			<data>
-			VmD6sL46YNZZbZkeesBWEHVOhowrSzJAGQZhE5zwkJs=
+			UvgB3EuFsAQ1zecV8mCY7XQccfduoXxsOuonb+QOcq8=
 			</data>
 		</dict>
 		<key>Frameworks/Walle.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aH2bZxC6Byl57aSZCvCDR2LuQz0=
+			MOjskPXo/Zkcc9PJcieQow3Iklo=
 			</data>
 			<key>hash2</key>
 			<data>
-			OPs9zKnxh/we6/xhZH2r1m9cJwfHw3HswLM2WG/DB9k=
+			/JRkoyZZKzwje6ZrtRSwRIsdAJnJZb14dFpNPuxzMrY=
 			</data>
 		</dict>
 		<key>Frameworks/Walle.framework/Walle</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yNof2MYTIoJi5Vv4WGVh7dm1Zr0=
+			5ocw8mTh6lS0wiI7pvIVfNcp1YI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ngaFV1NAQiUMxFBO3CunyZTRIwB5TkKVEKtKYIdBFPw=
+			P5jvptwFuEQLnzBbdOg3AgY/7r2S0sJ3mUVHkFhGKr8=
 			</data>
 		</dict>
 		<key>Frameworks/Walle.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mLfJ97gR2HwCazC91MUgM+16F+A=
+			T8tl0QruL4leRrEsVHUD681qgJ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			18tbU3DTfgQakEQ2okaILZdRDuFZ1s107cmL/ouMi/M=
+			eO/mvYYHw/bKKTV4mFhaeN4LJwtG6TgXBgIFX7GlP5w=
 			</data>
 		</dict>
 		<key>Main.storyboardc/Info.plist</key>

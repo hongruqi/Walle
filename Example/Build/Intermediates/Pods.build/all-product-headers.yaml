@@ -169,6 +169,11 @@
       'contents': [
         {
           'type': 'file',
+          'name': "BSBacktraceLogger.h",
+          'external-contents': "/Users/hongruqi/Pods/Walle/Walle/Classes/BSBacktraceLogger.h"
+        },
+        {
+          'type': 'file',
           'name': "UIViewController+Performance.h",
           'external-contents': "/Users/hongruqi/Pods/Walle/Walle/Classes/UIViewController+Performance.h"
         },
@@ -181,6 +186,11 @@
           'type': 'file',
           'name': "Walle-umbrella.h",
           'external-contents': "/Users/hongruqi/Pods/Walle/Example/Pods/Target Support Files/Walle/Walle-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "XYMainLoopMonitor.h",
+          'external-contents': "/Users/hongruqi/Pods/Walle/Walle/Classes/XYMainLoopMonitor.h"
         },
         {
           'type': 'file',

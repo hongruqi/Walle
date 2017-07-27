@@ -11,7 +11,7 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - JRSwizzle (1.0)
-  - Walle (1.0.0):
+  - Walle (1.1.0):
     - CocoaLumberjack
     - JRSwizzle
 
@@ -27,7 +27,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
-  Walle: d5b4b57a20e9949199999a9208f299c8d718c16e
+  Walle: 0fab80f37f3de41f1df492aa906e5a002b8d26fb
 
 PODFILE CHECKSUM: 56d332a7f26b2b50440dd74a38cd86b15f73bd3d
 

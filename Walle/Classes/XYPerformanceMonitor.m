@@ -13,7 +13,7 @@
 #import "XYPerformanceView.h"
 #import "XYPerformanceLabel.h"
 #include <mach/mach_time.h>
-
+#import "XYMainLoopMonitor.h"
 
 static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 static uint64_t loadTime;
@@ -48,7 +48,7 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
                                                             usingBlock:^(NSNotification *note) {
                                                                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                                                                     applicationRespondedTime = mach_absolute_time();
-                                                                   DDLogInfo(@"VivaVedio_IOS_Start_Time: %.f", MachTimeToSeconds(applicationRespondedTime - loadTime));
+                                                                   DDLogInfo(@"App_Start_Time: %.f s", MachTimeToSeconds(applicationRespondedTime - loadTime));
                                                                 });
                                                                 [[NSNotificationCenter defaultCenter] removeObserver:obs];
                                                             }];
@@ -102,12 +102,14 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
 {
     self.displayLink.paused = NO;
     [self.performanceView showPerformacneView:isShownPerformanceBar];
+    [[XYMainLoopMonitor sharedInstance] startMonitor];
 }
 
 - (void)stop
 {
     self.displayLink.paused = YES;
     [self.performanceView showPerformacneView:NO];
+    [[XYMainLoopMonitor sharedInstance] endMonitor];
 }
 
 - (void)setPageName:(NSString *)name
