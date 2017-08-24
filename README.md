@@ -15,10 +15,10 @@ IOS 8 or later , XCode 7 or later
 
 #How To Use
 ```Objc
-#import "XYPerformanceMonitor.h"
+#import "WTPerformanceMonitor.h"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-    [[XYPerformanceMonitor sharedInstance] startMonitorWithBar:YES];
+    [[WTPerformanceMonitor sharedInstance] startMonitorWithBar:YES];
 }
 ```
 
@@ -78,8 +78,8 @@ vm_size_t usedMemory(void) {
     _count = 0;
     
     NSInteger shownFPS = round(fps);
-    CGFloat memory = [XYPerformanceUtility usedMemoryInMB];
-    CGFloat cpu = [XYPerformanceUtility cpuUsage];
+    CGFloat memory = [WTPerformanceUtility usedMemoryInMB];
+    CGFloat cpu = [WTPerformanceUtility cpuUsage];
     DDLogInfo(@"FPS:%ld,MEM:%.2f,CPU:%.2f", (long)shownFPS, memory, cpu);
     
     [self.performanceView setPerformanceViewData:cpu memory:memory FPS:shownFPS];

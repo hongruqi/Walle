@@ -23,6 +23,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7FF9F0E85DDB59E99A3F624D /* Pods_Walle_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0145630D9DF373D4D654BC3 /* Pods_Walle_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8C4CA0051F4E7921004E7C20 /* XYOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CA0041F4E7921004E7C20 /* XYOneViewController.m */; };
 		ACB3CACAF71AC61ECC1390A1 /* Pods_Walle_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D6DF696B044B28B7C56D82 /* Pods_Walle_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C4CA0031F4E7921004E7C20 /* XYOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYOneViewController.h; sourceTree = "<group>"; };
+		8C4CA0041F4E7921004E7C20 /* XYOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYOneViewController.m; sourceTree = "<group>"; };
 		95D6DF696B044B28B7C56D82 /* Pods_Walle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F096820444CEB8661C9B9A /* Pods-Walle_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walle_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Walle_Example/Pods-Walle_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		ABAF6FD0D154FB47A2BF1AD6 /* Walle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Walle.podspec; path = ../Walle.podspec; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				6003F59D195388D20070C39A /* XYAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* XYViewController.h */,
+				8C4CA0041F4E7921004E7C20 /* XYOneViewController.m */,
+				8C4CA0031F4E7921004E7C20 /* XYOneViewController.h */,
 				6003F5A6195388D20070C39A /* XYViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -307,14 +312,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Walle_Example/Pods-Walle_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${BUILT_PRODUCTS_DIR}/JRSwizzle/JRSwizzle.framework",
 				"${BUILT_PRODUCTS_DIR}/Walle/Walle.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JRSwizzle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Walle.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +416,7 @@
 			files = (
 				6003F59E195388D20070C39A /* XYAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* XYViewController.m in Sources */,
+				8C4CA0051F4E7921004E7C20 /* XYOneViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

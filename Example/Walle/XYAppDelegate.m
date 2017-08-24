@@ -1,5 +1,5 @@
 //
-//  XYAppDelegate.m
+//  WTAppDelegate.m
 //  Walle
 //
 //  Created by lbrsilva-allin on 07/04/2017.
@@ -7,12 +7,19 @@
 //
 
 #import "XYAppDelegate.h"
-
+#import "XYViewController.h"
 @implementation XYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch.    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIViewController *controllerA = [[XYViewController alloc]init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controllerA];
+    //    [[XYPageNavigator instance] setRootNavigationController:nav];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

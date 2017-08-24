@@ -1,5 +1,5 @@
 //
-//  XYMainMonitor.h
+//  WTMainMonitor.h
 //  WeCycle
 //
 //  Created by Frenzy-Mac on 2017/5/19.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYMainLoopMonitor : NSObject
+@interface WTMainLoopMonitor : NSObject
 
 + (instancetype)sharedInstance;
 

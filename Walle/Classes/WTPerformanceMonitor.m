@@ -1,21 +1,18 @@
 //
-//  XYPerformanceMonitor.m
+//  WTPerformanceMonitor.m
 //  Pods
 //
 //  Created by walter on 04/07/2017.
 //
 //
 
-#import "XYPerformanceMonitor.h"
-#import "XYPerformanceUtility.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
-#import "DDLegacyMacros.h"
-#import "XYPerformanceView.h"
-#import "XYPerformanceLabel.h"
+#import "WTPerformanceMonitor.h"
+#import "WTPerformanceUtility.h"
+#import "WTPerformanceView.h"
+#import "WTPerformanceLabel.h"
 #include <mach/mach_time.h>
-#import "XYMainLoopMonitor.h"
+#import "WTMainLoopMonitor.h"
 
-static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 static uint64_t loadTime;
 static uint64_t applicationRespondedTime = -1;
 static mach_timebase_info_data_t timebaseInfo;
@@ -24,18 +21,19 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
     return ((machTime / 1e9) * timebaseInfo.numer) / timebaseInfo.denom;
 }
 
-@interface XYPerformanceMonitor()
+@interface WTPerformanceMonitor()
 
 @property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic, assign) NSTimeInterval lastTime;
 @property (nonatomic, assign) NSUInteger count;
-@property (nonatomic, strong) XYPerformanceView *performanceView;
+@property (nonatomic, strong) WTPerformanceView *performanceView;
 @property (nonatomic, assign) BOOL isShownPerformanceBar;
 @property (nonatomic, copy) NSString *currentPageName;
+@property (nonatomic, assign) CGFloat currentPageRenderTime;
 
 @end
 
-@implementation XYPerformanceMonitor
+@implementation WTPerformanceMonitor
 
 + (void)load
 {
@@ -48,7 +46,7 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
                                                             usingBlock:^(NSNotification *note) {
                                                                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                                                                     applicationRespondedTime = mach_absolute_time();
-                                                                   DDLogInfo(@"App_Start_Time: %.f s", MachTimeToSeconds(applicationRespondedTime - loadTime));
+                                                                   NSLog(@"App_Start_Time: %.f s", MachTimeToSeconds(applicationRespondedTime - loadTime));
                                                                 });
                                                                 [[NSNotificationCenter defaultCenter] removeObserver:obs];
                                                             }];
@@ -57,10 +55,10 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
 
 #pragma mark - Init
 + (instancetype)sharedInstance{
-    static XYPerformanceMonitor * sharedInstance;
+    static WTPerformanceMonitor * sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[XYPerformanceMonitor alloc] init];
+        sharedInstance = [[WTPerformanceMonitor alloc] init];
     });
     return sharedInstance;
 }
@@ -80,13 +78,7 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
                                                  selector: @selector(applicationWillResignActiveNotification)
                                                      name: UIApplicationWillResignActiveNotification
                                                    object: nil];
-    
-        DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
-        fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
-        fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-        [DDLog addLogger:fileLogger];
-        
-        _performanceView = [[XYPerformanceView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
+        _performanceView = [[WTPerformanceView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
     }
     
     return self;
@@ -102,19 +94,24 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
 {
     self.displayLink.paused = NO;
     [self.performanceView showPerformacneView:isShownPerformanceBar];
-    [[XYMainLoopMonitor sharedInstance] startMonitor];
+    [[WTMainLoopMonitor sharedInstance] startMonitor];
 }
 
 - (void)stop
 {
     self.displayLink.paused = YES;
     [self.performanceView showPerformacneView:NO];
-    [[XYMainLoopMonitor sharedInstance] endMonitor];
+    [[WTMainLoopMonitor sharedInstance] endMonitor];
 }
 
 - (void)setPageName:(NSString *)name
 {
     self.currentPageName = name;
+}
+
+- (void)setPageRenderTime:(CGFloat)time
+{
+    self.currentPageRenderTime = time;
 }
 
 - (void)envokeDisplayLink:(CADisplayLink *)displayLink
@@ -137,12 +134,14 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
     _count = 0;
     
     NSInteger shownFPS = round(fps);
-    CGFloat memory = [XYPerformanceUtility usedMemoryInMB];
-    CGFloat cpu = [XYPerformanceUtility cpuUsage];
-    DDLogInfo(@"Page:%@, FPS:%ld, MEM:%.2f, CPU:%.2f", self.currentPageName, (long)shownFPS, memory, cpu);
+    CGFloat memory = [WTPerformanceUtility usedMemoryInMB];
+    CGFloat cpu = [WTPerformanceUtility cpuUsage];
     
-    [self.performanceView setPerformanceViewData:cpu memory:memory FPS:shownFPS];
+    if ([self.delegate respondsToSelector:@selector(performanceMonitorResult:cpu:memory:FPS:render:)]) {
+        [self.delegate performanceMonitorResult:self cpu:cpu memory:memory FPS:shownFPS render:self.currentPageRenderTime];
+    }
     
+    [self.performanceView setPerformanceViewData:cpu memory:memory FPS:shownFPS render:self.currentPageRenderTime];
 }
 
 - (void)applicationDidBecomeActiveNotification {

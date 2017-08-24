@@ -7,4 +7,5 @@ framework module FBSnapshotTestCase {
 
 module FBSnapshotTestCase.Swift {
     header "FBSnapshotTestCase-Swift.h"
+    requires objc
 }

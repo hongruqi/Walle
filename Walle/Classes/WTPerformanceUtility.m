@@ -1,15 +1,15 @@
 //
-//  XYPerformanceUtility.m
+//  WTPerformanceUtility.m
 //  Pods
 //
 //  Created by walter on 04/07/2017.
 //
 //
 
-#import "XYPerformanceUtility.h"
+#import "WTPerformanceUtility.h"
 #import "mach/mach.h"
 
-@implementation XYPerformanceUtility
+@implementation WTPerformanceUtility
 
 + (CGFloat)usedMemoryInMB{
     vm_size_t memory = usedMemory();

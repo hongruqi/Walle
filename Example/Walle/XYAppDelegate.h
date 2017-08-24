@@ -1,5 +1,5 @@
 //
-//  XYAppDelegate.h
+//  WTAppDelegate.h
 //  Walle
 //
 //  Created by lbrsilva-allin on 07/04/2017.

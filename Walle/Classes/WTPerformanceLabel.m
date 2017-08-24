@@ -1,19 +1,19 @@
 //
-//  XYPerformanceLabel.m
+//  WTPerformanceLabel.m
 //  Walle
 //
 //  Created by walter on 07/07/2017.
 //
 
-#import "XYPerformanceLabel.h"
+#import "WTPerformanceLabel.h"
 
-@interface XYPerformanceLabel()
+@interface WTPerformanceLabel()
 
 @property (strong,nonatomic)NSMutableDictionary * configCache;
 
 @end
 
-@implementation XYPerformanceLabel
+@implementation WTPerformanceLabel
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -26,13 +26,13 @@
 
 - (void)setup
 {
-    [self setTextColor:[UIColor colorWithRed:244.0/255.0 green:66.0/255.0 blue:66.0/255.0 alpha:1.0] forState:XYPerformanceStateBad];
-    [self setTextColor:[UIColor orangeColor] forState:XYPerformanceStateWarning];
-    [self setTextColor:[UIColor colorWithRed:66.0/255.0 green:244.0/255.0 blue:89.0/255.0 alpha:1.0] forState:XYPerformanceStateGood];
-    self.state = XYPerformanceStateGood;
+    [self setTextColor:[UIColor colorWithRed:244.0/255.0 green:66.0/255.0 blue:66.0/255.0 alpha:1.0] forState:WTPerformanceStateBad];
+    [self setTextColor:[UIColor orangeColor] forState:WTPerformanceStateWarning];
+    [self setTextColor:[UIColor colorWithRed:66.0/255.0 green:244.0/255.0 blue:89.0/255.0 alpha:1.0] forState:WTPerformanceStateGood];
+    self.state = WTPerformanceStateGood;
 }
 
-- (void)setTextColor:(UIColor *)textColor forState:(XYPerformanceLabelState)state{
+- (void)setTextColor:(UIColor *)textColor forState:(WTPerformanceLabelState)state{
     if (textColor) {
         [self.configCache setObject:textColor forKey:@(state)];
     }else{
@@ -40,12 +40,12 @@
     }
 }
 
-- (UIColor *)textColorForState:(XYPerformanceLabelState)state
+- (UIColor *)textColorForState:(WTPerformanceLabelState)state
 {
     return [self.configCache objectForKey:@(state)];
 }
 
-- (void)setState:(XYPerformanceLabelState)state
+- (void)setState:(WTPerformanceLabelState)state
 {
     _state = state;
     UIColor * color = [self textColorForState:state];

@@ -1,17 +1,17 @@
 //
-//  XYMainMonitor.m
+//  WTMainMonitor.m
 //  WeCycle
 //
 //  Created by Frenzy-Mac on 2017/5/19.
 //  Copyright © 2017年 com.quvideo.wecycle. All rights reserved.
 //
 
-#import "XYMainLoopMonitor.h"
+#import "WTMainLoopMonitor.h"
 #import <libkern/OSAtomic.h>
 #import <execinfo.h>
 #import "BSBacktraceLogger.h"
 
-@interface XYMainLoopMonitor(){
+@interface WTMainLoopMonitor(){
     CFRunLoopObserverRef _observer;
     dispatch_semaphore_t _semaphore;
     CFRunLoopActivity _activity;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation XYMainLoopMonitor
+@implementation WTMainLoopMonitor
 
 + (instancetype) sharedInstance
 {
